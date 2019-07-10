@@ -97,4 +97,11 @@ public class MySpringDataSOlr {
 		System.out.println(content);
 	}
 
+	@Test
+	public void testDeleteAll(){
+		Query query=new SimpleQuery("*:*");
+		solrTemplate.delete(query);
+		solrTemplate.commit();
+	}
+
 }
